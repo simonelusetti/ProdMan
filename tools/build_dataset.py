@@ -64,7 +64,7 @@ def _prepare_dataset(
     rebuild: bool,
     shuffle: bool,
 ) -> Path:
-    relative = Path("data") / _dataset_filename(name, split, subset, cnn_field, dataset_config)
+    relative = Path("..") / "data" / _dataset_filename(name, split, subset, cnn_field, dataset_config)
     target = Path(to_absolute_path(str(relative)))
 
     if target.exists():
